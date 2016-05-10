@@ -2,6 +2,8 @@
 Tool for easy clean PE32 from AV signature 
  
 # Manual [RU]
+**SignFinder** - утилита для быстрого поиска сигнатур антивирусов в pe32 файлах
+
 ## Пример работы
 Можно посмотреть на [youtube](https://www.youtube.com/watch?v=5I6HMdZfoE8)
 
