@@ -255,6 +255,14 @@ def mode_manual2(file_data, dir_name, file_offset, offset_size, window_size):
 		i += 1
 	print "[-] Manual2 mode - done"   
 	
+
+#show info about pe struct
+def mode_info(pe_info):
+	str = ''
+	for s in pe_info['sections']:
+		str += '{}\t{}\t{}\n'.format(s['name'], s['offset'], s['size'])
+	print (str)
+	
 #------------------------------------------------
 # control functions
 #------------------------------------------------
@@ -273,6 +281,9 @@ def main():
 		
 		if mode=='fast':
 			mode_fast(file_data, dir_name, pe_info)
+
+		elif mode=='info':
+			mode_info(pe_info)
 
 		elif mode=='head':
 			mode_header(file_data, dir_name, pe_info)			
@@ -310,7 +321,8 @@ EXAMPLE:
 	SF.py head path_to_exe 
 	SF.py sect path_to_exe section_number
 	SF.py man path_to_exe offset size part_num
-	SF.py man2 path_to_exe offset size window_size"""
+	SF.py man2 path_to_exe offset size window_size
+	SF.py info path_to_exe"""
 
 if __name__ == '__main__':
 	main()
