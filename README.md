@@ -33,6 +33,8 @@ Tool for easy clean PE32 from AV signature
 * EMUL - на точку входа эмулятора поставлен выход. Он прекратит свою работу и детект эмулятора исчезнет.
 * IMPORT - весь импорт перезатёрт - если сигнатура стояла на импорте - она пропадёт.
 
+Вызов:
+
 	python SF.py path_to_exe fast
 
 ## Header mode
@@ -40,6 +42,8 @@ Tool for easy clean PE32 from AV signature
 
 * IMAGE_DOS_HEADER-e_cblp
 * IMAGE_OPTIONAL_HEADER-AddressOfEntryPoint
+
+Вызов:
 
 	python SF.py path_to_exe head
 
@@ -61,6 +65,8 @@ Tool for easy clean PE32 from AV signature
 	FF FF 00 00 FF FF 	
 	FF FF FF FF 00 00
 
+Вызов:
+
 	python SF.py path_to_exe man offset size part_num
 
 ## Manual2 mode
@@ -74,6 +80,8 @@ Tool for easy clean PE32 from AV signature
 	00 00 FF FF FF FF 
 	FF 00 00 FF FF FF 
 	FF FF 00 00 FF FF 
+	
+Вызов:
 
 	SF.py path_to_exe man2 offset size window_size
 
