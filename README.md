@@ -18,13 +18,13 @@ Tool for easy clean PE32 from AV signature
 ## Info mode
 Информация о секциях, в пригодной для софта системе счисления.
 
+	python SF.py path_to_exe info
+
 ## Fast mode
 Быстрый режим призван определить какого толка сигнатура нас беспокоит:
 * Эмулятора
 * Импорта
 * Секций
-
-	python SF.py path_to_exe info
 
 Создаются следующие типы файлов:
 * ALL_SECTION - стёрты все секции
