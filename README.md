@@ -22,7 +22,7 @@ Tool for easy clean PE32 from AV signature
 
 Формат вызова:
 
-	python SF.py fast path_to_exe 
+	python SF.py path_to_exe fast
 
 ## Header mode
 Методом исключения, если затирание секций оставляет детект - сигнатура стоит на оставшихся заголовках pe32. Данный режим затирает каждое поле по отдельности, создавая файлы типа:
@@ -32,14 +32,15 @@ Tool for easy clean PE32 from AV signature
 
 Формат вызова:
 
-	python SF.py head path_to_exe
+	python SF.py path_to_exe head
 
 ## Section mode
 Это режим работы с конкретной секцией, она делится на 100 участков одинакового размера и в каждом файле стёрт свой участок. Указывается порядковый номер секции.
 
 Формат вызова:
 
-	python SF.py sect path_to_exe section_number
+	python SF.py path_to_exe sect section_number
+	python SF.py path_to_exe sect section_number -p 100
 
 ## Manual mode
 Режим ручного управления. Заданный в параметрах участок, делится на заданное количество частей, каждая перезатирается по очереди. Длина шага равна размеру одной части.
@@ -55,7 +56,7 @@ Tool for easy clean PE32 from AV signature
 	
 Формат вызова:
 
-	python SF.py man path_to_exe offset size part_num
+	python SF.py path_to_exe man offset size part_num
 
 ## Manual2 mode
 Второй ручной режим, отличается от первого длиной шага, который равен одному байту.
@@ -71,5 +72,5 @@ Tool for easy clean PE32 from AV signature
 
 Формат вызова:
 
-	SF.py man2 path_to_exe offset size window_size
+	SF.py path_to_exe man2 offset size window_size
 
