@@ -24,14 +24,14 @@ Tool for easy clean PE32 from AV signature
 * Импорта
 * Секций
 
+	python SF.py path_to_exe info
+
 Создаются следующие типы файлов:
 * ALL_SECTION - стёрты все секции
 * ALL_SECTION_NOT[0].text - стёрты все секции кроме первой, под именем .text
 * SECTION[2].data - стёрта только третья секция, под именем .data
 * EMUL - на точку входа эмулятора поставлен выход. Он прекратит свою работу и детект эмулятора исчезнет.
 * IMPORT - весь импорт перезатёрт - если сигнатура стояла на импорте - она пропадёт.
-
-Формат вызова:
 
 	python SF.py path_to_exe fast
 
@@ -41,14 +41,10 @@ Tool for easy clean PE32 from AV signature
 * IMAGE_DOS_HEADER-e_cblp
 * IMAGE_OPTIONAL_HEADER-AddressOfEntryPoint
 
-Формат вызова:
-
 	python SF.py path_to_exe head
 
 ## Section mode
 Это режим работы с конкретной секцией, она делится на 100 участков одинакового размера и в каждом файле стёрт свой участок. Указывается порядковый номер секции.
-
-Формат вызова:
 
 	python SF.py path_to_exe sect section_number
 	python SF.py path_to_exe sect section_number -p 100
@@ -64,8 +60,6 @@ Tool for easy clean PE32 from AV signature
 	00 00 FF FF FF FF 	
 	FF FF 00 00 FF FF 	
 	FF FF FF FF 00 00
-	
-Формат вызова:
 
 	python SF.py path_to_exe man offset size part_num
 
@@ -80,8 +74,6 @@ Tool for easy clean PE32 from AV signature
 	00 00 FF FF FF FF 
 	FF 00 00 FF FF FF 
 	FF FF 00 00 FF FF 
-
-Формат вызова:
 
 	SF.py path_to_exe man2 offset size window_size
 
