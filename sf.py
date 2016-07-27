@@ -11,7 +11,7 @@ Install - pip install pefile.zip
 __author__   = 'Auth0r'
 __site__     = 'vxlab.info'
 __twitter__  = 'https://twitter.com/vxlab_info/'
-__version__  = '26.07.2016'
+__version__  = '27.07.2016'
 
 import os
 import sys
